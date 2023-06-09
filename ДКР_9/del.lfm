@@ -1,0 +1,57 @@
+object Del_Form: TDel_Form
+  Left = 753
+  Height = 105
+  Top = 177
+  Width = 291
+  BorderStyle = bsToolWindow
+  Caption = 'Удалить запись'
+  ClientHeight = 105
+  ClientWidth = 291
+  Color = 3156776
+  LCLVersion = '2.2.6.0'
+  object Edit_id: TEdit
+    Left = 8
+    Height = 23
+    Top = 32
+    Width = 272
+    Color = 14322034
+    TabOrder = 0
+    Text = 'Edit_id'
+  end
+  object Button_OK: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 64
+    Width = 75
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 1
+  end
+  object Button_Cancel: TBitBtn
+    Left = 210
+    Height = 30
+    Top = 64
+    Width = 75
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object Label_id: TLabel
+    Left = 8
+    Height = 15
+    Top = 8
+    Width = 268
+    Caption = 'Введите id участника которого хотите удалить'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

@@ -1,0 +1,132 @@
+object Add_Form: TAdd_Form
+  Left = 738
+  Height = 201
+  Top = 271
+  Width = 300
+  BorderStyle = bsToolWindow
+  Caption = 'Добавление в базу'
+  ClientHeight = 201
+  ClientWidth = 300
+  Color = 3156776
+  Font.CharSet = RUSSIAN_CHARSET
+  Font.Name = 'Segoe UI Semibold'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  Font.Style = [fsBold]
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  object Edit_name: TEdit
+    Left = 8
+    Height = 23
+    Top = 16
+    Width = 280
+    Color = 14322034
+    TabOrder = 0
+    Text = 'Edit_name'
+  end
+  object Edit_about: TEdit
+    Left = 8
+    Height = 23
+    Top = 56
+    Width = 280
+    Color = 14322034
+    TabOrder = 1
+    Text = 'Edit_about'
+  end
+  object Edit_member: TEdit
+    Left = 8
+    Height = 23
+    Top = 96
+    Width = 280
+    Color = 14322034
+    TabOrder = 2
+    Text = 'Edit_member'
+  end
+  object Edit_role: TEdit
+    Left = 8
+    Height = 23
+    Top = 136
+    Width = 280
+    Color = 14322034
+    TabOrder = 3
+    Text = 'Edit_role'
+  end
+  object Button_OK: TBitBtn
+    Left = 8
+    Height = 30
+    Top = 168
+    Width = 75
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object Button_Cancel: TBitBtn
+    Left = 213
+    Height = 30
+    Top = 168
+    Width = 75
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 5
+  end
+  object Label_Name: TLabel
+    Left = 8
+    Height = 15
+    Top = 0
+    Width = 86
+    Caption = 'Имя участника'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_About: TLabel
+    Left = 8
+    Height = 15
+    Top = 40
+    Width = 61
+    Caption = '"Обо мне"'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Member: TLabel
+    Left = 8
+    Height = 15
+    Top = 80
+    Width = 149
+    Caption = 'С какого числа находится'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label_Role: TLabel
+    Left = 8
+    Height = 15
+    Top = 120
+    Width = 89
+    Caption = 'Роль участника'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

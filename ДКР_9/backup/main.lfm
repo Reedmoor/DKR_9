@@ -1,0 +1,245 @@
+object Main_Form: TMain_Form
+  Left = 762
+  Height = 600
+  Top = 237
+  Width = 1052
+  Caption = 'Discord'
+  ClientHeight = 600
+  ClientWidth = 1052
+  Color = 3156776
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 1050
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object DBGrid: TDBGrid
+    Left = 0
+    Height = 516
+    Top = 0
+    Width = 842
+    AlternateColor = 4801858
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Color = 4077878
+    Columns = <    
+      item
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clWhite
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 150
+        MaxSize = 300
+        ReadOnly = True
+        Title.Caption = 'id'
+        Width = 60
+        FieldName = 'id'
+      end    
+      item
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clWhite
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 150
+        MaxSize = 300
+        ReadOnly = True
+        Title.Caption = 'name'
+        Width = 150
+        FieldName = 'name'
+      end    
+      item
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clWhite
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 150
+        MaxSize = 300
+        Title.Caption = 'about'
+        Width = 150
+        FieldName = 'about'
+      end    
+      item
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clWhite
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 150
+        MaxSize = 300
+        Title.Caption = 'member'
+        Width = 150
+        FieldName = 'member'
+      end    
+      item
+        Font.CharSet = RUSSIAN_CHARSET
+        Font.Color = clWhite
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        MinSize = 150
+        MaxSize = 300
+        Title.Caption = 'role'
+        Width = 150
+        FieldName = 'role'
+      end>
+    DataSource = DataSource1
+    FixedHotColor = 4801858
+    TabOrder = 0
+  end
+  object ComboBox_Search: TComboBox
+    Cursor = crHandPoint
+    Left = 108
+    Height = 33
+    Top = 545
+    Width = 342
+    Anchors = [akBottom]
+    Color = 14322034
+    ItemHeight = 25
+    ItemIndex = 0
+    Items.Strings = (
+      'id'
+      'name'
+      'about'
+      'member'
+      'role'
+    )
+    ReadOnly = True
+    TabOrder = 1
+    Text = 'id'
+  end
+  object Edit_Search: TEdit
+    Left = 512
+    Height = 33
+    Top = 545
+    Width = 372
+    Anchors = [akBottom]
+    Color = 14322034
+    TabOrder = 2
+  end
+  object Button_Edit: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 848
+    Height = 50
+    Top = 86
+    Width = 204
+    Anchors = [akRight]
+    BorderSpacing.Top = 10
+    Caption = 'Редактировать запись'
+    Color = 14322034
+    Flat = True
+    Transparent = False
+    OnClick = Button_EditClick
+  end
+  object Button_Delete: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 848
+    Height = 50
+    Top = 158
+    Width = 204
+    Anchors = [akRight]
+    BorderSpacing.Top = 10
+    Caption = 'Удалить запись'
+    Color = 14322034
+    Flat = True
+    Transparent = False
+    OnClick = Button_DeleteClick
+  end
+  object Button_Add: TSpeedButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Cursor = crHandPoint
+    Left = 848
+    Height = 50
+    Top = 14
+    Width = 204
+    Anchors = [akRight]
+    BorderSpacing.Top = 10
+    Caption = 'Добавить запись'
+    Color = 14322034
+    Flat = True
+    Transparent = False
+    OnClick = Button_AddClick
+  end
+  object Label_Search_1: TLabel
+    AnchorSideBottom.Control = ComboBox_Search
+    Left = 34
+    Height = 25
+    Top = 520
+    Width = 303
+    Anchors = [akBottom]
+    Caption = 'Столбец по которому будет поиск'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Label_Search_2: TLabel
+    AnchorSideBottom.Control = Edit_Search
+    Left = 493
+    Height = 25
+    Top = 520
+    Width = 226
+    Anchors = [akBottom]
+    Caption = 'Введите что хотите найти'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
+  object Button_Search: TSpeedButton
+    Left = 885
+    Height = 50
+    Top = 528
+    Width = 204
+    Anchors = [akBottom]
+    Caption = 'Искать'
+    Color = 14322034
+    Flat = True
+    Transparent = False
+    OnClick = Button_SearchClick
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    AfterConnect = SQLite3Connection1AfterConnect
+    DatabaseName = 'C:\Users\User\Desktop\ДКР_9\discord.db'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    AlwaysUseBigint = False
+  end
+  object SQLQuery1: TSQLQuery
+    FileName = 'C:\Users\User\Desktop\ДКР_9\discord.db'
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    Macros = <>
+    DataSource = DataSource1
+    Left = 48
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection1
+    Left = 96
+  end
+  object DataSource1: TDataSource
+    DataSet = Sqlite3Dataset1
+    Left = 144
+  end
+  object Sqlite3Dataset1: TSqlite3Dataset
+    FileName = 'discord.db'
+    TableName = 'ZooTbl'
+    Left = 192
+  end
+end
